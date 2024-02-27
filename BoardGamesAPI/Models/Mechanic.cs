@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BoardGamesAPI.Models;
 
-[Table("Domains")]
-public class Domain
+[Table("")]
+public class Mechanic
 {
     [Key]
     [Required]
     public int Id { get; set; }
-    
+
     [Required]
     public string? Name { get; set; }
 
@@ -19,5 +19,5 @@ public class Domain
     [Required]
     public DateTime LastModifiedDate { get; set; }
 
-    public ICollection<BoardGames_Domains>? BoardGames_Domains { get; set; }
+    public ICollection<BoardGames_Mechanics>? BoardGames_Mechanics { get; set; }
 }
